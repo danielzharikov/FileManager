@@ -258,9 +258,18 @@ namespace FileManagerv3._0
                 try
                 {
                     var zip = ZipFile.Open(FilePath + "/" + CompressTextBox.Text + ".zip", ZipArchiveMode.Create);
-                    for (int i = 0; i < toarchive.Count; i++)
+                    try
                     {
-                        zip.CreateEntryFromFile(toarchive[i], Path.GetFileName(toarchive[i]), CompressionLevel.Optimal);
+                        for (int i = 0; i < toarchive.Count; i++)
+                        {
+                            zip.CreateEntryFromFile(toarchive[i], Path.GetFileName(toarchive[i]), CompressionLevel.Optimal);
+                        }
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                        zip.Dispose();
+                        File.Delete(FilePath + "/" + CompressTextBox.Text + ".zip");
                     }
                     zip.Dispose();
                 }
