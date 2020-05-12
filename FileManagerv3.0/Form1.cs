@@ -22,6 +22,7 @@ namespace FileManagerv3._0
         {
             try
             {
+                fileSystemWatcher1.Path = FilePath;
                 DirectoryInfo fileList = new DirectoryInfo(FilePath);
                 FileInfo[] files = fileList.GetFiles(); // GET ALL THE FILES
                 DirectoryInfo[] dirs = fileList.GetDirectories(); // GET ALL THE DIRECTORIES
@@ -279,6 +280,43 @@ namespace FileManagerv3._0
                 }
                 
             }
+            loadingfiles();
+        }
+
+        private void fileSystemWatcher1_Changed(object sender, FileSystemEventArgs e)
+        {
+            loadingfiles();
+        }
+
+        private void fileSystemWatcher1_Created(object sender, FileSystemEventArgs e)
+        {
+            loadingfiles();
+        }
+
+        private void fileSystemWatcher1_Deleted(object sender, FileSystemEventArgs e)
+        {
+            loadingfiles();
+        }
+
+        private void fileSystemWatcher1_Renamed(object sender, RenamedEventArgs e)
+        {
+            loadingfiles();
+        }
+
+        private void btnNewFolder_Click(object sender, EventArgs e)
+        {
+            int counting = 0;
+            if(Directory.Exists(FilePath + "/" + "New Folder"))
+            {
+                counting++;
+                while (Directory.Exists(FilePath + "/" + "New Folder" + counting.ToString()))
+                {
+                    counting++;
+                }
+            }
+            if (counting == 0)
+                Directory.CreateDirectory(FilePath + "/" + "New Folder");
+            else Directory.CreateDirectory(FilePath + "/" + "New Folder" + counting.ToString());
             loadingfiles();
         }
     }

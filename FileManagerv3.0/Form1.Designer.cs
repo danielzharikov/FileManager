@@ -43,6 +43,9 @@
             this.btnRename = new System.Windows.Forms.Button();
             this.btnCompress = new System.Windows.Forms.Button();
             this.CompressTextBox = new System.Windows.Forms.TextBox();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.btnNewFolder = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // listView1
@@ -176,11 +179,34 @@
             this.CompressTextBox.Size = new System.Drawing.Size(100, 20);
             this.CompressTextBox.TabIndex = 10;
             // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.Filter = "**";
+            this.fileSystemWatcher1.IncludeSubdirectories = true;
+            this.fileSystemWatcher1.Path = "C://Games";
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            this.fileSystemWatcher1.Changed += new System.IO.FileSystemEventHandler(this.fileSystemWatcher1_Changed);
+            this.fileSystemWatcher1.Created += new System.IO.FileSystemEventHandler(this.fileSystemWatcher1_Created);
+            this.fileSystemWatcher1.Deleted += new System.IO.FileSystemEventHandler(this.fileSystemWatcher1_Deleted);
+            this.fileSystemWatcher1.Renamed += new System.IO.RenamedEventHandler(this.fileSystemWatcher1_Renamed);
+            // 
+            // btnNewFolder
+            // 
+            this.btnNewFolder.Location = new System.Drawing.Point(93, 35);
+            this.btnNewFolder.Name = "btnNewFolder";
+            this.btnNewFolder.Size = new System.Drawing.Size(75, 23);
+            this.btnNewFolder.TabIndex = 11;
+            this.btnNewFolder.Text = "New Folder";
+            this.btnNewFolder.UseVisualStyleBackColor = true;
+            this.btnNewFolder.Click += new System.EventHandler(this.btnNewFolder_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(758, 428);
+            this.Controls.Add(this.btnNewFolder);
             this.Controls.Add(this.CompressTextBox);
             this.Controls.Add(this.btnCompress);
             this.Controls.Add(this.btnRename);
@@ -195,6 +221,7 @@
             this.Name = "Form1";
             this.Text = "File Manager";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,6 +244,8 @@
         private System.Windows.Forms.Button btnRename;
         private System.Windows.Forms.Button btnCompress;
         private System.Windows.Forms.TextBox CompressTextBox;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.Button btnNewFolder;
     }
 }
 
