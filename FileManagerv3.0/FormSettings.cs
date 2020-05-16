@@ -37,6 +37,7 @@ namespace FileManagerv3._0
             int background = comboBoxColor.SelectedIndex;
             int listviewcolor = comboBox1.SelectedIndex;
             savesettings(background, listviewcolor);
+            this.Close();
         }
     }
 }
