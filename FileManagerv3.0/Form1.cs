@@ -5,19 +5,65 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Collections.Generic;
 using System.IO.Compression;
+using System.Xml.Serialization;
+using System.Drawing;
 
 namespace FileManagerv3._0
 {
     public partial class Form1 : Form
     {
+        UserSettings userprop;
         private string FilePath = "C:/";
         private List<string> tocopy = new List<string>();
         private List<string> toarchive = new List<string>();
         public Form1()
         {
             InitializeComponent();
+            DeSerializator();
         }
 
+        private void DeSerializator()
+        {
+            XmlSerializer xml = new XmlSerializer(typeof(UserSettings));
+            using (FileStream fs = new FileStream("UserProps.xml", FileMode.OpenOrCreate))
+            {
+                userprop = (UserSettings)xml.Deserialize(fs);
+            }
+            Color color1 = Color.White;
+            switch (userprop.background)
+            {
+                case 0:
+                    color1 = Color.Yellow;
+                    break;
+                case 1:
+                    color1 = Color.Blue;
+                    break;
+                case 2:
+                    color1 = Color.White;
+                    break;
+                case 3:
+                    color1 = Color.Green;
+                    break;
+            }
+            Color color2 = Color.White;
+            switch (userprop.listviewcolor)
+            {
+                case 0:
+                    color2 = Color.Yellow;
+                    break;
+                case 1:
+                    color2 = Color.Blue;
+                    break;
+                case 2:
+                    color2 = Color.White;
+                    break;
+                case 3:
+                    color2 = Color.Green;
+                    break;
+            }
+            this.BackColor = color1;
+            listView1.BackColor = color2;
+        }
         private void loadingfiles()
         {
             try
@@ -318,6 +364,12 @@ namespace FileManagerv3._0
                 Directory.CreateDirectory(FilePath + "/" + "New Folder");
             else Directory.CreateDirectory(FilePath + "/" + "New Folder" + counting.ToString());
             loadingfiles();
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            FormSettings formSettings = new FormSettings();
+            formSettings.Show();
         }
     }
 }

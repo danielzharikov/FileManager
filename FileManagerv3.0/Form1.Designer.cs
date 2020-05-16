@@ -45,6 +45,7 @@
             this.CompressTextBox = new System.Windows.Forms.TextBox();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.btnNewFolder = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,6 +90,7 @@
             // 
             // FilePathTextBox
             // 
+            this.FilePathTextBox.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FilePathTextBox.Location = new System.Drawing.Point(93, 13);
             this.FilePathTextBox.Name = "FilePathTextBox";
             this.FilePathTextBox.ReadOnly = true;
@@ -97,6 +99,7 @@
             // 
             // btnBack
             // 
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Location = new System.Drawing.Point(12, 12);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
@@ -107,6 +110,7 @@
             // 
             // btnOpenFolder
             // 
+            this.btnOpenFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpenFolder.Location = new System.Drawing.Point(360, 12);
             this.btnOpenFolder.Name = "btnOpenFolder";
             this.btnOpenFolder.Size = new System.Drawing.Size(75, 23);
@@ -117,6 +121,7 @@
             // 
             // btnCopy
             // 
+            this.btnCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCopy.Location = new System.Drawing.Point(441, 12);
             this.btnCopy.Name = "btnCopy";
             this.btnCopy.Size = new System.Drawing.Size(75, 23);
@@ -127,6 +132,7 @@
             // 
             // btnPaste
             // 
+            this.btnPaste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPaste.Location = new System.Drawing.Point(522, 12);
             this.btnPaste.Name = "btnPaste";
             this.btnPaste.Size = new System.Drawing.Size(75, 23);
@@ -137,6 +143,7 @@
             // 
             // btnDelete
             // 
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Location = new System.Drawing.Point(603, 12);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
@@ -154,6 +161,7 @@
             // 
             // btnRename
             // 
+            this.btnRename.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRename.Location = new System.Drawing.Point(522, 35);
             this.btnRename.Name = "btnRename";
             this.btnRename.Size = new System.Drawing.Size(75, 23);
@@ -164,6 +172,7 @@
             // 
             // btnCompress
             // 
+            this.btnCompress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompress.Location = new System.Drawing.Point(441, 35);
             this.btnCompress.Name = "btnCompress";
             this.btnCompress.Size = new System.Drawing.Size(75, 23);
@@ -193,6 +202,7 @@
             // 
             // btnNewFolder
             // 
+            this.btnNewFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewFolder.Location = new System.Drawing.Point(93, 35);
             this.btnNewFolder.Name = "btnNewFolder";
             this.btnNewFolder.Size = new System.Drawing.Size(75, 23);
@@ -201,11 +211,23 @@
             this.btnNewFolder.UseVisualStyleBackColor = true;
             this.btnNewFolder.Click += new System.EventHandler(this.btnNewFolder_Click);
             // 
+            // btnSettings
+            // 
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Location = new System.Drawing.Point(12, 35);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(75, 23);
+            this.btnSettings.TabIndex = 12;
+            this.btnSettings.Text = "Settings";
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(758, 428);
+            this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.btnNewFolder);
             this.Controls.Add(this.CompressTextBox);
             this.Controls.Add(this.btnCompress);
@@ -246,6 +268,7 @@
         private System.Windows.Forms.TextBox CompressTextBox;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.Button btnNewFolder;
+        private System.Windows.Forms.Button btnSettings;
     }
 }
 
