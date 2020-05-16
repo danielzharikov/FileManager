@@ -1,0 +1,13 @@
+C:\Users\dszha\source\repos\FileManagerv3.0\FileManagerv3.0\bin\Debug\FileManagerv3.0.exe.config
+C:\Users\dszha\source\repos\FileManagerv3.0\FileManagerv3.0\bin\Debug\FileManagerv3.0.exe
+C:\Users\dszha\source\repos\FileManagerv3.0\FileManagerv3.0\bin\Debug\FileManagerv3.0.pdb
+C:\Users\dszha\source\repos\FileManagerv3.0\FileManagerv3.0\obj\Debug\FileManagerv3.0.csprojAssemblyReference.cache
+C:\Users\dszha\source\repos\FileManagerv3.0\FileManagerv3.0\obj\Debug\FileManagerv3._0.Form1.resources
+C:\Users\dszha\source\repos\FileManagerv3.0\FileManagerv3.0\obj\Debug\FileManagerv3._0.Properties.Resources.resources
+C:\Users\dszha\source\repos\FileManagerv3.0\FileManagerv3.0\obj\Debug\FileManagerv3.0.csproj.GenerateResource.cache
+C:\Users\dszha\source\repos\FileManagerv3.0\FileManagerv3.0\obj\Debug\FileManagerv3.0.csproj.CoreCompileInputs.cache
+C:\Users\dszha\source\repos\FileManagerv3.0\FileManagerv3.0\obj\Debug\FileManagerv3.0.exe
+C:\Users\dszha\source\repos\FileManagerv3.0\FileManagerv3.0\obj\Debug\FileManagerv3.0.pdb
+C:\Users\dszha\source\repos\FileManagerv3.0\FileManagerv3.0\bin\Debug\Ionic.Zip.Reduced.dll
+C:\Users\dszha\source\repos\FileManagerv3.0\FileManagerv3.0\obj\Debug\FileManagerv3.0.csproj.CopyComplete
+C:\Users\dszha\source\repos\FileManagerv3.0\FileManagerv3.0\obj\Debug\FileManagerv3._0.FormSettings.resources
