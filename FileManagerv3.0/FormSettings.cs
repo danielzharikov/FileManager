@@ -27,6 +27,7 @@ namespace FileManagerv3._0
             using(FileStream fs = new FileStream("UserProps.xml", FileMode.OpenOrCreate))
             {
                 xml.Serialize(fs, userprop);
+
             }
         }
 
