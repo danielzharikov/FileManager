@@ -65,7 +65,6 @@ namespace FileManagerv3._0
             int page = 1;
             string url = StandURL + prefix + "/?page=" + page.ToString();
             string line = GetHTML(url);
-            MessageBox.Show(url);
             Match amount = Regex.Match(line, "<span>Товары</span>(\n|\r|\r\n)(.*?)(\n|\r|\r\n)(.*?)</span>");
             Regex regex = new Regex("data-product-id=\"(.*?)\"(\n|\r|\r\n)data-name=\"(.*?)\"(\n|\r|\r\n)(.*?)(\n|\r|\r\n)(.*?)(\n|\r|\r\n)(.*?)(\n|\r|\r\n)(.*?)(\n|\r|\r\n)(.*?)(\n|\r|\r\n)(.*?)(\n|\r|\r\n)(.*?)(\n|\r|\r\n)(.*?)(\n|\r|\r\n)(.*?)(\n|\r|\r\n)(.*?)(\n|\r|\r\n)(.*?)(\n|\r|\r\n)(.*?)(\n|\r|\r\n)(.*?)data-discount-price=\"(.*?)\"(\n|\r|\r\n)(.*?)(\n|\r|\r\n)(.*?)(\n|\r|\r\n)(.*?)(\n|\r|\r\n)(.*?)(\n|\r|\r\n)(\n|\r|\r\n)(.*?)(\n|\r|\r\n)(.*?)(\n|\r|\r\n)(.*?)(\n|\r|\r\n)(.*?)title=\"(.*?)-");
             int allamount = int.Parse(amount.Groups[4].Value);
@@ -76,6 +75,7 @@ namespace FileManagerv3._0
                 amountweneed = allamount;
             }
             int counting = 0;
+            listView1.Clear();
             while(counting < amountweneed)
             {
                 url = StandURL + prefix + "/?page=" + page.ToString();

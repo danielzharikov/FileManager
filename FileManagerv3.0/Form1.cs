@@ -336,7 +336,7 @@ namespace FileManagerv3._0
 
         private void fileSystemWatcher1_Created(object sender, FileSystemEventArgs e)
         {
-            loadingfiles();
+            //loadingfiles();
         }
 
         private void fileSystemWatcher1_Deleted(object sender, FileSystemEventArgs e)
