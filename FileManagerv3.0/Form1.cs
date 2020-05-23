@@ -371,5 +371,11 @@ namespace FileManagerv3._0
             FormSettings formSettings = new FormSettings();
             formSettings.Show();
         }
+
+        private void btnFindBookForm_Click(object sender, EventArgs e)
+        {
+            FormFindBooks formfindbooks = new FormFindBooks();
+            formfindbooks.Show();
+        }
     }
 }

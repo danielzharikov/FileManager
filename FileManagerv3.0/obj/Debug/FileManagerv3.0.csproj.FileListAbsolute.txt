@@ -11,3 +11,4 @@ C:\Users\dszha\source\repos\FileManagerv3.0\FileManagerv3.0\obj\Debug\FileManage
 C:\Users\dszha\source\repos\FileManagerv3.0\FileManagerv3.0\bin\Debug\Ionic.Zip.Reduced.dll
 C:\Users\dszha\source\repos\FileManagerv3.0\FileManagerv3.0\obj\Debug\FileManagerv3.0.csproj.CopyComplete
 C:\Users\dszha\source\repos\FileManagerv3.0\FileManagerv3.0\obj\Debug\FileManagerv3._0.FormSettings.resources
+C:\Users\dszha\source\repos\FileManagerv3.0\FileManagerv3.0\obj\Debug\FileManagerv3._0.FormFindBooks.resources

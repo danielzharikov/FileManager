@@ -46,6 +46,7 @@
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.btnNewFolder = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
+            this.btnFindBookForm = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -222,11 +223,23 @@
             this.btnSettings.UseVisualStyleBackColor = true;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
+            // btnFindBookForm
+            // 
+            this.btnFindBookForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindBookForm.Location = new System.Drawing.Point(198, 35);
+            this.btnFindBookForm.Name = "btnFindBookForm";
+            this.btnFindBookForm.Size = new System.Drawing.Size(75, 23);
+            this.btnFindBookForm.TabIndex = 13;
+            this.btnFindBookForm.Text = "FindBooks";
+            this.btnFindBookForm.UseVisualStyleBackColor = true;
+            this.btnFindBookForm.Click += new System.EventHandler(this.btnFindBookForm_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(758, 428);
+            this.Controls.Add(this.btnFindBookForm);
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.btnNewFolder);
             this.Controls.Add(this.CompressTextBox);
@@ -269,6 +282,7 @@
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.Button btnNewFolder;
         private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Button btnFindBookForm;
     }
 }
 
