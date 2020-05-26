@@ -46,6 +46,8 @@
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.btnNewFolder = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
+            this.btnToSearch = new System.Windows.Forms.Button();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,7 +113,7 @@
             // btnOpenFolder
             // 
             this.btnOpenFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpenFolder.Location = new System.Drawing.Point(360, 12);
+            this.btnOpenFolder.Location = new System.Drawing.Point(408, 12);
             this.btnOpenFolder.Name = "btnOpenFolder";
             this.btnOpenFolder.Size = new System.Drawing.Size(75, 23);
             this.btnOpenFolder.TabIndex = 3;
@@ -122,7 +124,7 @@
             // btnCopy
             // 
             this.btnCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCopy.Location = new System.Drawing.Point(441, 12);
+            this.btnCopy.Location = new System.Drawing.Point(489, 12);
             this.btnCopy.Name = "btnCopy";
             this.btnCopy.Size = new System.Drawing.Size(75, 23);
             this.btnCopy.TabIndex = 4;
@@ -133,7 +135,7 @@
             // btnPaste
             // 
             this.btnPaste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPaste.Location = new System.Drawing.Point(522, 12);
+            this.btnPaste.Location = new System.Drawing.Point(570, 12);
             this.btnPaste.Name = "btnPaste";
             this.btnPaste.Size = new System.Drawing.Size(75, 23);
             this.btnPaste.TabIndex = 5;
@@ -144,7 +146,7 @@
             // btnDelete
             // 
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Location = new System.Drawing.Point(603, 12);
+            this.btnDelete.Location = new System.Drawing.Point(651, 12);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 6;
@@ -154,7 +156,7 @@
             // 
             // RenameTextBox
             // 
-            this.RenameTextBox.Location = new System.Drawing.Point(603, 37);
+            this.RenameTextBox.Location = new System.Drawing.Point(651, 37);
             this.RenameTextBox.Name = "RenameTextBox";
             this.RenameTextBox.Size = new System.Drawing.Size(100, 20);
             this.RenameTextBox.TabIndex = 7;
@@ -162,7 +164,7 @@
             // btnRename
             // 
             this.btnRename.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRename.Location = new System.Drawing.Point(522, 35);
+            this.btnRename.Location = new System.Drawing.Point(570, 35);
             this.btnRename.Name = "btnRename";
             this.btnRename.Size = new System.Drawing.Size(75, 23);
             this.btnRename.TabIndex = 8;
@@ -173,7 +175,7 @@
             // btnCompress
             // 
             this.btnCompress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCompress.Location = new System.Drawing.Point(441, 35);
+            this.btnCompress.Location = new System.Drawing.Point(489, 35);
             this.btnCompress.Name = "btnCompress";
             this.btnCompress.Size = new System.Drawing.Size(75, 23);
             this.btnCompress.TabIndex = 9;
@@ -183,7 +185,7 @@
             // 
             // CompressTextBox
             // 
-            this.CompressTextBox.Location = new System.Drawing.Point(335, 37);
+            this.CompressTextBox.Location = new System.Drawing.Point(383, 37);
             this.CompressTextBox.Name = "CompressTextBox";
             this.CompressTextBox.Size = new System.Drawing.Size(100, 20);
             this.CompressTextBox.TabIndex = 10;
@@ -222,11 +224,31 @@
             this.btnSettings.UseVisualStyleBackColor = true;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
+            // btnToSearch
+            // 
+            this.btnToSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnToSearch.Location = new System.Drawing.Point(279, 35);
+            this.btnToSearch.Name = "btnToSearch";
+            this.btnToSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnToSearch.TabIndex = 13;
+            this.btnToSearch.Text = "Search";
+            this.btnToSearch.UseVisualStyleBackColor = true;
+            this.btnToSearch.Click += new System.EventHandler(this.btnToSearch_Click);
+            // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Location = new System.Drawing.Point(173, 37);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSearch.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(758, 428);
+            this.ClientSize = new System.Drawing.Size(764, 428);
+            this.Controls.Add(this.textBoxSearch);
+            this.Controls.Add(this.btnToSearch);
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.btnNewFolder);
             this.Controls.Add(this.CompressTextBox);
@@ -269,6 +291,8 @@
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.Button btnNewFolder;
         private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.Button btnToSearch;
     }
 }
 

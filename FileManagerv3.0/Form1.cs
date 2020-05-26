@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.IO.Compression;
 using System.Xml.Serialization;
 using System.Drawing;
+using System.Text.RegularExpressions;
 
 namespace FileManagerv3._0
 {
@@ -277,7 +278,7 @@ namespace FileManagerv3._0
                             }
                             else
                             {
-                                File.Move(FilePath + "/" + listView1.Items[i].Text, FilePath + "/" + RenameTextBox.Text + listView1.Items[i].SubItems[0]);
+                                File.Move(FilePath + "/" + listView1.Items[i].Text, FilePath + "/" + RenameTextBox.Text);
                             }
                             break;
                         }
@@ -370,6 +371,19 @@ namespace FileManagerv3._0
         {
             FormSettings formSettings = new FormSettings();
             formSettings.Show();
+        }
+
+        private void btnToSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FormToSearch form2search = new FormToSearch(FilePath, textBoxSearch.Text);
+                form2search.Show();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
