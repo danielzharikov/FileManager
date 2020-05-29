@@ -46,6 +46,7 @@
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.btnNewFolder = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
+            this.btnToDownload = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -222,11 +223,23 @@
             this.btnSettings.UseVisualStyleBackColor = true;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
+            // btnToDownload
+            // 
+            this.btnToDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnToDownload.Location = new System.Drawing.Point(174, 35);
+            this.btnToDownload.Name = "btnToDownload";
+            this.btnToDownload.Size = new System.Drawing.Size(109, 23);
+            this.btnToDownload.TabIndex = 13;
+            this.btnToDownload.Text = "ToDownload";
+            this.btnToDownload.UseVisualStyleBackColor = true;
+            this.btnToDownload.Click += new System.EventHandler(this.btnToDownload_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(758, 428);
+            this.Controls.Add(this.btnToDownload);
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.btnNewFolder);
             this.Controls.Add(this.CompressTextBox);
@@ -269,6 +282,7 @@
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.Button btnNewFolder;
         private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Button btnToDownload;
     }
 }
 

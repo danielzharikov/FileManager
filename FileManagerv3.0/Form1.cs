@@ -371,5 +371,11 @@ namespace FileManagerv3._0
             FormSettings formSettings = new FormSettings();
             formSettings.Show();
         }
+
+        private void btnToDownload_Click(object sender, EventArgs e)
+        {
+            FormToDownload form2download = new FormToDownload();
+            form2download.Show();
+        }
     }
 }
